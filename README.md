@@ -6,7 +6,7 @@
 
 Snapshot
 
-![Snapshot](https://wx3.sinaimg.cn/mw690/a2117cdbgy1focu2yoxfsj20d8088aaf.jpg)
+<img width="300" src="https://wx3.sinaimg.cn/mw690/a2117cdbgy1focu2yoxfsj20d8088aaf.jpg">
 
 ## Introduction
 
