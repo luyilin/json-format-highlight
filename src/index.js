@@ -1,9 +1,9 @@
 const defaultColors = {
-  key: '#eb6161',
-  number: 'tomato',
-  string: '#397c79',
+  key: 'dimgray',
+  number: 'lightskyblue',
+  string: 'lightcoral',
   boolean: 'lightseagreen',
-  null: 'lightskyblue'
+  null: 'cornflowerblue'
 }
 
 export default function (json) {

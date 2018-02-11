@@ -6,7 +6,6 @@
 
 <script>
   import formatHighlight from '../src'
-  console.log(formatHighlight)
 
   export default {
     data() {
@@ -15,7 +14,11 @@
           a: 'test',
           b: 111,
           c: false,
-          d: null
+          d: null,
+          e: {
+            ww: 'll',
+            qq: 123
+          }
         })
       }
     }

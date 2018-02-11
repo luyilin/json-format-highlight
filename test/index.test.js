@@ -2,5 +2,5 @@ import formatHighlight from '../src'
 
 test('It works', () => {
   const out = formatHighlight({a: '11'})
-  // expect(out).toBe('<span style="color: #eb6161">"a":</span> <span style="color: #397c79">"11"</span>')
+  expect(out).toBe('{\n  <span style="color: dimgray">"a":</span> <span style="color: lightcoral">"11"</span>\n}')
 })

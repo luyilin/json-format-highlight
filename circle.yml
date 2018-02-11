@@ -1,15 +1,21 @@
-machine:
-  node:
-    version: 7
-  environment:
-    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
 
-dependencies:
-  override:
-    - yarn
-  cache_directories:
-    - ~/.cache/yarn
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
 
-test:
-  override:
-    - yarn test
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      - run: yarn test
