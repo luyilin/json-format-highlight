@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pre><code v-html="code"></code></pre>
+    <pre><code v-html="code" /></pre>
   </div>
 </template>
 

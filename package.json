@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "prepublishOnly": "npm run test && npm run build && npm run build:example",
-    "test": "test-vue-app",
+    "lint": "eslint . --ext .js --ext .vue",
+    "test": "npm run lint && test-vue-app",
     "build": "bili --debug",
     "example": "poi",
     "build:example": "poi build"
@@ -31,8 +32,15 @@
     ],
     "name": "json-format-highlight"
   },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/recommended"
+    ]
+  },
   "devDependencies": {
     "bili": "^2.2.0",
+    "eslint": "^4.17.0",
+    "eslint-plugin-vue": "^4.2.2",
     "poi": "^9.3.10",
     "test-vue-app": "^1.0.0",
     "vue-test-utils": "^1.0.0-beta.2"
