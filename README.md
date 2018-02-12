@@ -43,9 +43,9 @@ You can set the key and types of value of the json to custom colors.
 |---|---|---|---|
 |keyColor|string|```dimgray```|Key color|
 |numberColor|string|```lightskyblue```|Color of the value of the number type|
-|stringColor|string|Color of the value of the string type|```lightcoral```|
-|trueColor|string|```lightseagreen```|Color of the value of the boolean type and equal to true|
-|falseColor|string|```#f66578```|Color of the value of the string type and equal to false|
+|stringColor|string|```lightcoral```|Color of the value of the string type|
+|trueColor|string|```lightseagreen```|Color of the value of the boolean type and equals to true|
+|falseColor|string|```#f66578```|Color of the value of the string type and equals to false|
 |nullColor|string|```cornflowerblue```|Color of the value of the null type|
 
 
