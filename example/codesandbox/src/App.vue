@@ -22,7 +22,7 @@
             rr: {t: 'awt'}
           }
         }, {
-          falseColor: 'red'
+          falseColor: '#f66578'
         })
       }
     }
