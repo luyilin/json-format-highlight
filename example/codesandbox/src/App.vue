@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import formatHighlight from '../src'
+  import formatHighlight from 'json-format-highlight'
 
   export default {
     data() {
