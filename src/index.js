@@ -13,7 +13,6 @@ export default function (json, colorOptions = {}) {
     json = JSON.stringify(json, null, 2)
   }
   let colors = Object.assign({}, defaultColors, colorOptions)
-  console.log(colorOptions, colors)
   json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>')
   return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+]?\d+)?)/g, (match) => {
     let color = colors.numberColor

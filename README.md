@@ -4,9 +4,11 @@
 
 [DEMO](https://luyilin.github.io/json-format-highlight/example/dist/)
 
+[![Edit luyilin/json-format-highlight: codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/luyilin/json-format-highlight/tree/master/example/codesandbox)
+
 Snapshot
 
-<img width="300" src="https://wx3.sinaimg.cn/mw690/a2117cdbgy1focu2yoxfsj20d8088aaf.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/12069729/36086732-f0a54202-1008-11e8-8d4e-23ec574b3db4.png">
 
 ## Introduction
 
