@@ -14,6 +14,8 @@ Snapshot
 
 Format json and highlight it as well.
 
+A really tiny package, only 652 bytes.
+
 ## Install
 
 ```bash
