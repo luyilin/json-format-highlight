@@ -15,7 +15,7 @@ Snapshot
 Format json and highlight it as well.
 
 * Really tiny
-* No dependency to other library
+* No dependency on other library
 * Handles HTML tags within field values
 * Handles quotes and other special characters within field values
 * Styling is self-contained, no need to setup CSS
