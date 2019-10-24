@@ -7,6 +7,27 @@ const defaultColors = {
   nullColor: 'cornflowerblue'
 }
 
+const entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
+
+function escapeHtml (html) {
+  return String(html).replace(/[&<>"'`=]/g, function (s) {
+      return entityMap[s];
+  });
+}
+
+function unescapeJsonString (escaped) {
+  return JSON.parse(`{"a": "${escaped}"}`).a;
+}
+
+
 export default function (json, colorOptions = {}) {
   if (!json) return
   if (typeof json !== 'string') {
@@ -16,10 +37,15 @@ export default function (json, colorOptions = {}) {
   json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>')
   return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+]?\d+)?)/g, (match) => {
     let color = colors.numberColor
+    let style = ''
     if (/^"/.test(match)) {
-      color = /:$/.test(match)
-        ? colors.keyColor
-        : colors.stringColor
+      if (/:$/.test(match)) {
+        color = colors.keyColor
+      } else {
+        color = colors.stringColor;
+        match = '"' + escapeHtml(unescapeJsonString(match.substr(1, match.length - 2))) + '"';
+        style = 'word-wrap:break-word;white-space:pre-wrap;';
+      }
     } else {
       color = /true/.test(match)
         ? colors.trueColor
@@ -29,6 +55,6 @@ export default function (json, colorOptions = {}) {
             ? colors.nullColor
             : color
     }
-    return `<span style="color: ${color}">${match}</span>`
+    return `<span style="${style}color:${color}">${match}</span>`
   })
 }
