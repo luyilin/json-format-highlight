@@ -20,7 +20,8 @@
             ww: 'kkk',
             qq: [1, 2, 3],
             rr: {t: 'awt'}
-          }
+          },
+          g: '<p>hello world</p>',
         }, {
           falseColor: '#f66578'
         })
