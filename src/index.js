@@ -23,11 +23,6 @@ function escapeHtml (html) {
   });
 }
 
-function unescapeJsonString (escaped) {
-  return JSON.parse(`{"a": "${escaped}"}`).a;
-}
-
-
 export default function (json, colorOptions = {}) {
   if (!json) return
   if (typeof json !== 'string') {
@@ -43,7 +38,7 @@ export default function (json, colorOptions = {}) {
         color = colors.keyColor
       } else {
         color = colors.stringColor;
-        match = '"' + escapeHtml(unescapeJsonString(match.substr(1, match.length - 2))) + '"';
+        match = '"' + escapeHtml(match.substr(1, match.length - 2)) + '"';
         style = 'word-wrap:break-word;white-space:pre-wrap;';
       }
     } else {

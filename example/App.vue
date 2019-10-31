@@ -21,7 +21,7 @@
             qq: [1, 2, 3],
             rr: {t: 'awt'}
           },
-          g: '<p>hello world</p>',
+          g: '<p>hello world</p> with \n <p>new line</p> and quote sign: "',
         }, {
           falseColor: '#f66578'
         })
