@@ -8,7 +8,7 @@
 
 Snapshot
 
-<img width="350" src="https://user-images.githubusercontent.com/12069729/36086981-87bbd074-100a-11e8-904f-5614f59a5a88.png">
+<img width="350" src="https://user-images.githubusercontent.com/12069729/69597426-ea1de300-1040-11ea-9f00-b7f12362092b.png">
 
 ## Introduction
 

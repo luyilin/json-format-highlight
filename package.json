@@ -1,6 +1,6 @@
 {
   "name": "json-format-highlight",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Format json and highlight it as well.",
   "repository": {
     "url": "luyilin/json-format-highlight",
