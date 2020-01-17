@@ -24,9 +24,9 @@ function escapeHtml (html) {
 }
 
 export default function (json, colorOptions = {}) {
-  if (!json) return
-  if (typeof json !== 'string') {
-    json = JSON.stringify(json, null, 2)
+  const valueType = typeof json
+  if (valueType !== 'string') {
+    json = JSON.stringify(json, null, 2) || valueType
   }
   let colors = Object.assign({}, defaultColors, colorOptions)
   json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>')
